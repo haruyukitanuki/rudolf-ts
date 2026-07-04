@@ -37,7 +37,9 @@
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepublish": "npm run build",
+    "publish": "npm publish --access=public"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
