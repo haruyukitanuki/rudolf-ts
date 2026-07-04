@@ -1,7 +1,7 @@
 {
   "name": "@tanuden/rudolf",
   "version": "0.1.0",
-  "description": "Type definitions for the RUDOLF (Railway Unified Display Object Link Format) wire schema.",
+  "description": "Universal wire-format standard for communication between Japanese train simulators and external programs.",
   "license": "Apache-2.0",
   "homepage": "https://github.com/haruyukitanuki/rudolf-ts",
   "repository": {
@@ -28,7 +28,6 @@
     "README.md",
     "LICENSE"
   ],
-  "sideEffects": false,
   "engines": {
     "node": ">=18"
   },
