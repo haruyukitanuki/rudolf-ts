@@ -30,13 +30,13 @@ export interface CarStaticInfo {
 /** Vehicle identity plus static per-car composition (cabs, motors, pantographs). */
 export interface VehicleInfo {
   /**
-   * Human display name for the formation (e.g. `"225系0番台"`). Please ensure the correct kanji is used
-   * for kei and bandai.
+   * Human display name for the model (e.g. `"225系0番台"`). Please ensure the correct kanji is used
+   * for kei and bandai. If there is more than one type of model, please delimit it with a `+` (e.g. `"E231系1000番台+E233系3000番台"`).
    */
   name: string;
   /**
-   * Vehicle/formation model identifier (e.g. `"E233-1000"`). For maximum interoperability, it should
-   * be in format of `series-subseries`; Avoid using Japanese characters.
+   * Vehicle model identifier (e.g. `"225-0"`). For maximum interoperability, it should
+   * be in format of `series-subseries`; Romanise all kana in TitleCase. If there is more than one type of model, please delimit it with a `+` (e.g. `"E231-1000+E233-3000"`).
    */
   model: string;
   /**
