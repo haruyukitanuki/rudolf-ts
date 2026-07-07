@@ -43,8 +43,7 @@
     "lint:check": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check:types": "attw --pack .",
-    "prepublish": "npm run build"
+    "check:types": "attw --pack ."
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
