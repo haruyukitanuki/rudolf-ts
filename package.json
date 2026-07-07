@@ -44,8 +44,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check:types": "attw --pack .",
-    "prepublish": "npm run build",
-    "publish": "npm publish --access=public"
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
