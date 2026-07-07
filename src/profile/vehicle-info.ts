@@ -1,6 +1,7 @@
 import type { Direction } from '../enums/direction';
 import type { PantographDirection } from '../enums/pantograph-direction';
 import type { PantographType } from '../enums/pantograph-type';
+import type { VehicleCapabilities } from './vehicle-capabilities';
 
 /** Static composition for a single car (cabs, motors, pantograph layout). */
 export interface CarStaticInfo {
@@ -50,4 +51,9 @@ export interface VehicleInfo {
   cars: CarStaticInfo[];
   /** Car no. for the lead car. This should usually be the car number of either the first or last item in `cars`. */
   leadCar: number;
+  /**
+   * Static control-hardware description (mascon layout, notch counts, holding brake, compressor
+   * pressures). Inner fields are null when the sim has no value for them.
+   */
+  capabilities: VehicleCapabilities;
 }

@@ -1,7 +1,7 @@
 /** Panel-lamp vocabulary overrides: typically maps opaque integer panel indices to named keys. */
 export interface LampVocabulary {
   /** Panel-array index (string-keyed) → named lamp key. */
-  bveIndexToKey?: Record<string, string>;
+  bveIndexToKey: Record<string, string> | null;
 }
 
 /**
@@ -10,10 +10,10 @@ export interface LampVocabulary {
  * human-meaningful labels without hard-coding per-vehicle knowledge in the UI.
  */
 export interface Vocabularies {
-  /** Panel-lamp vocabulary overrides; null/undefined when no overrides apply. */
-  lamps?: LampVocabulary;
-  /** Per-route overrides for the default 0-7 signal-phase vocabulary. */
-  signalPhase?: Record<string, string>;
-  /** Sim-known beacon type code → human-readable meaning. */
-  transponders?: Record<string, string>;
+  /** Panel-lamp vocabulary overrides; null when no overrides apply. */
+  lamps: LampVocabulary | null;
+  /** Per-route overrides for the default 0-7 signal-phase vocabulary; null when none. */
+  signalPhase: Record<string, string> | null;
+  /** Sim-known beacon type code → human-readable meaning; null when none. */
+  transponders: Record<string, string> | null;
 }

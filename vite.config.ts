@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import path from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
@@ -17,8 +18,19 @@ export default defineConfig({
   },
   plugins: [
     dts({
-      rollupTypes: true,
-      include: ['src/**/*.ts']
+      // Bundle all declarations into one self-contained dist/index.d.ts (no relative
+      // specifiers), so strict `moduleResolution: node16/nodenext` consumers don't trip on
+      // extensionless imports. Powered by @microsoft/api-extractor.
+      bundleTypes: true,
+      include: ['src/**/*.ts'],
+      // The bundled index.d.ts is fully inlined and types-only, so it doubles as the CJS
+      // declaration. Emit a .d.cts twin for the package.json `require` → types condition.
+      afterBuild: () => {
+        fs.copyFileSync(
+          path.resolve(__dirname, 'dist/index.d.ts'),
+          path.resolve(__dirname, 'dist/index.d.cts')
+        );
+      }
     })
   ]
 });

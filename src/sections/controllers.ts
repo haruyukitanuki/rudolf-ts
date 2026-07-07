@@ -5,16 +5,16 @@ import type { Reverser } from '../enums/reverser';
 export interface AtoState {
   /** True when ATO is engaged and currently driving. */
   active: boolean;
-  /** The notch ATO is currently commanding; undefined when ATO is not asserting a value. */
-  notch?: number;
+  /** The notch ATO is currently commanding; null when ATO is not asserting a value. */
+  notch: number | null;
 }
 
 /** Train Automatic Stop Controller state. */
 export interface TascState {
   /** True when TASC is engaged. */
   active: boolean;
-  /** The brake notch TASC is currently commanding; undefined when not asserting. */
-  notch?: number;
+  /** The brake notch TASC is currently commanding; null when not asserting. */
+  notch: number | null;
   /** True during the final low-speed alignment phase against the platform stop marker. */
   inching: boolean;
 }

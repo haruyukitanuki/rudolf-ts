@@ -6,8 +6,8 @@ export interface AtsRichState {
   code: string[];
   /** Human-readable display labels (e.g. `'P接近'`). */
   name: string[];
-  /** 0 = info, 1 = warning, 2 = critical. */
-  severity: (0 | 1 | 2)[];
+  /** 0 = info, 1 = warning, 2 = critical; values above 2 are sim/vehicle-specific custom. */
+  severity: number[];
   /** Machine-readable event category for each state (parallel with `code`). */
   type: AtsRichStateType[];
 }

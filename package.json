@@ -1,6 +1,6 @@
 {
   "name": "@tanuden/rudolf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Universal wire-format standard for communication between Japanese train simulators and external programs.",
   "license": "Apache-2.0",
   "homepage": "https://github.com/haruyukitanuki/rudolf-ts",
@@ -17,9 +17,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./package.json": "./package.json"
   },
@@ -38,10 +43,13 @@
     "lint:check": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "check:types": "attw --pack .",
     "prepublish": "npm run build",
     "publish": "npm publish --access=public"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@microsoft/api-extractor": "^7.52.8",
     "@types/node": "^26.1.0",
     "eslint": "^10.6.0",
     "eslint-plugin-unicorn": "^70.0.0",

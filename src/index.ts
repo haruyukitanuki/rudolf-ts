@@ -14,6 +14,8 @@ export * from './enums/drive-mode';
 export * from './enums/eb-deadman-method';
 export * from './enums/game-screen';
 export * from './enums/line-direction';
+export * from './enums/mascon-brake-type';
+export * from './enums/mascon-type';
 export * from './enums/pantograph-direction';
 export * from './enums/pantograph-type';
 export * from './enums/reverser';
@@ -34,6 +36,7 @@ export * from './input/input-action';
 export * from './profile/capabilities';
 export * from './profile/scenario-info';
 export * from './profile/sim-info';
+export * from './profile/vehicle-capabilities';
 export * from './profile/vehicle-info';
 export * from './profile/vocabularies';
 
