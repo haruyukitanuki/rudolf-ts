@@ -32,7 +32,7 @@ See [Rudolf spec](https://github.com/haruyukitanuki/rudolf/blob/main/spec/rudolf
 
 Rudolf is Open Source Software (OSS), licensed under Apache 2.0. You may freely distribute, use and modify code provided to you in repository in accordance with it.
 
-A copy of the license can be found at the root of the repository [here](https://github.com/haruyukitanuki/rudolf/blob/main/LICENSE.md).
+A copy of the license can be found at the root of the repository [here](./LICENSE).
 
 ## Support
 
