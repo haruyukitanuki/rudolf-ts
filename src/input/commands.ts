@@ -1,13 +1,21 @@
 import type { EBDeadmanMethod } from '../enums/eb-deadman-method';
 import type { Reverser } from '../enums/reverser';
 import type { Wiper } from '../enums/wiper';
-import type { InputAction } from './input-action';
+
+/** Reserved `SetNotch` emergency sentinel: a `value <= EB` (regardless of `relative`) means Emergency. */
+export const EB = -100;
 
 /** Set the combined power/brake notch (single-handle vehicles). */
 export interface SetNotchCommand {
   kind: 'SetNotch';
-  /** Signed combined notch: -8=EB, -7=B6 ... -2=B1, -1=抑速, 0=N, 1=P1 ... 5=P5. */
+  /**
+   * Combined notch. When `relative` is false (default) this is the absolute position:
+   * 0=N, +n=Pn, -1=抑速, -2..=B1.... When `relative` is true this is a signed step delta.
+   * In either mode, `value <= EB` (-100) is Emergency (非常).
+   */
   value: number;
+  /** True = `value` is a signed step delta; default false = absolute position. */
+  relative?: boolean;
 }
 
 /** Set the power notch (two-handle vehicles). */
@@ -41,8 +49,8 @@ export interface SetReverserCommand {
 /** Press, release, or toggle a discrete cab button. */
 export interface SetButtonCommand {
   kind: 'SetButton';
-  /** Which button. */
-  action: InputAction;
+  /** Which button, as a `VehicleAction`/`GameAction` string (or a custom capability-gated action). */
+  action: string;
   /** True = pressed/on; false = released/off. */
   state: boolean;
 }

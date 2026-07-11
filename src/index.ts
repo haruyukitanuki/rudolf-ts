@@ -30,7 +30,8 @@ export * from './enums/wiper';
 // Input
 export * from './input/command';
 export * from './input/commands';
-export * from './input/input-action';
+export * from './input/vehicle-action';
+export * from './input/game-action';
 
 // Profile
 export * from './profile/capabilities';
