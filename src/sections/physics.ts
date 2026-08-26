@@ -6,6 +6,8 @@ export interface Physics {
   fromStartDistance: number;
   /** Absolute kilometer-post; null when sim doesn't expose chainage. */
   absoluteDistance: number | null;
+  /** Meters; null when the sim doesn't expose radius. Negative for left turns, positive for right, 0 for straights. */
+  curveRadius: number | null;
   /** Per mille; null when the sim doesn't expose gradient. */
   gradient: number | null;
   /** MR Pressure in kPa; train-level; always present. */
@@ -16,6 +18,7 @@ export const emptyPhysics = (): Physics => ({
   speed: 0,
   fromStartDistance: 0,
   absoluteDistance: null,
+  curveRadius: null,
   gradient: null,
   mrPressure: 0
 });

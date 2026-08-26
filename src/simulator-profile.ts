@@ -13,6 +13,8 @@ import type { Vocabularies } from './profile/vocabularies';
  */
 export interface SimulatorProfile extends RudolfDocumentBase {
   kind: 'SimulatorProfile';
+  /** Incremented when profile data is changed within a drive. */
+  sequence: number;
   /** Simulator + adapter identity (name + version). */
   sim: SimInfo;
   /** Scenario metadata (title, route, author, start time, diagram info). */

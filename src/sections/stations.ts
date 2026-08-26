@@ -14,7 +14,7 @@ export interface Station {
   fromStartDistance: number;
   /** Absolute kilometer-post; null when the sim doesn't expose chainage. */
   absoluteDistance: number | null;
-  /** Which side the doors open. See `DoorSide` for the int convention. */
+  /** Which side the doors open. See `SideOpened` for the int convention. */
   doorSide: number;
   /** Whether this is a passenger stop, operation-only stop, or pass. */
   stopType: StopType | null;
@@ -32,7 +32,10 @@ export interface Station {
 
 /** Ordered station list for the diagram plus pointers into it. */
 export interface Stations {
-  /** Stations in scheduled visit order. May be empty before the diagram is loaded. */
+  /**
+   * Stations in scheduled visit order, or upcoming stations nearest first.
+   * Check `Capabilities` for the behavior. May be empty before the diagram is loaded.
+   */
   list: Station[];
   /** Index into `list` for the station the train is currently at; null when between stations. */
   currentIndex: number | null;

@@ -8,7 +8,7 @@ import type { GameState } from './sections/game-state';
 import type { Lamps } from './sections/lamps';
 import type { Physics } from './sections/physics';
 import type { Signals } from './sections/signals';
-import type { SpeedLimit } from './sections/speed-limit';
+import type { SpeedLimits } from './sections/speed-limits';
 import type { Stations } from './sections/stations';
 import type { Switches } from './sections/switches';
 import type { Time } from './sections/time';
@@ -38,8 +38,8 @@ export interface OutputDataFrame extends RudolfDocumentBase {
   ats: Ats;
   /** Upcoming signals with aspect, distance, and transponders. */
   signals: Signals;
-  /** Current speed limit and the next change point. */
-  speedLimit: SpeedLimit;
+  /** Current speed limit and the next change points. */
+  speedLimits: SpeedLimits;
   /** Per-car dynamic state (BC pressure, amperage, occupancy). */
   cars: Cars;
   /** Cab switch state (horn, buzzer, headlights, wiper). */

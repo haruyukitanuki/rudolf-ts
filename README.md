@@ -11,14 +11,18 @@ npm install @tanuden/rudolf
 ## Usage
 
 ```ts
-import type { OutputFrame, SimProfile, InputCommand } from '@tanuden/rudolf';
-import { SCHEMA_VERSION, emptyPhysics, SignalPhase, DoorSide } from '@tanuden/rudolf';
+import type { OutputDataFrame, SimulatorProfile, InputCommand } from '@tanuden/rudolf';
+import { SCHEMA_VERSION, emptyPhysics, SignalPhase, SideOpened } from '@tanuden/rudolf';
 
 const physics = emptyPhysics();
 physics.speed = 78.4;
 
 if (frame.signals.list[0]?.phase === SignalPhase.R) {
   // stop signal
+}
+
+if (frame.doors.perCar[0]?.sideOpened === SideOpened.Right) {
+  // right doors open on car 1
 }
 ```
 
