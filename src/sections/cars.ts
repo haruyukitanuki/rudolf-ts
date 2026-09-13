@@ -8,6 +8,8 @@ export interface Car {
   amperage: number | null;
   /** Percentage filled (May exceed 100%). */
   occupancyRate: number | null;
+  /** Per-car live load in kg; meaningful when the `physics.mass` capability is `All`. */
+  loadMass: number | null;
 }
 
 /** Per-car dynamic state. Static composition lives in `VehicleInfo.cars`. */
