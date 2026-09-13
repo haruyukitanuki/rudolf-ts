@@ -12,6 +12,8 @@ export interface Physics {
   gradient: number | null;
   /** MR Pressure in kPa; train-level; always present. */
   mrPressure: number;
+  /** Total load in kg. Equal to the sum of per-car `loadMass` values only when the `physics.mass` capability is `All`. */
+  totalLoadMass: number | null;
 }
 
 export const emptyPhysics = (): Physics => ({
@@ -20,5 +22,6 @@ export const emptyPhysics = (): Physics => ({
   absoluteDistance: null,
   curveRadius: null,
   gradient: null,
-  mrPressure: 0
+  mrPressure: 0,
+  totalLoadMass: null
 });
