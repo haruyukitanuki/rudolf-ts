@@ -7,6 +7,9 @@ export * from './input-command';
 
 // Enums
 export * from './enums/ats-rich-state-type';
+export * from './enums/bogie-fault';
+export * from './enums/bogie-position';
+export * from './enums/car-fault';
 export * from './enums/crew-role';
 export * from './enums/direction';
 export * from './enums/drive-mode';
