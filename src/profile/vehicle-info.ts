@@ -1,3 +1,4 @@
+import type { BogiePosition } from '../enums/bogie-position';
 import type { Direction } from '../enums/direction';
 import type { PantographDirection } from '../enums/pantograph-direction';
 import type { PantographType } from '../enums/pantograph-type';
@@ -27,6 +28,26 @@ export interface CarStaticInfo {
   length: number;
   /** Car mass without passengers in kg; `-1` if unknown. Freight may be included here only if it cannot be separated from car mass. */
   emptyMass: number;
+  /**
+   * Bogies under this car, left-to-right display order. Empty when the sim does not provide
+   * composition. A Jacobs bogie (see `BogiePosition.Jacobs`) is shared with the adjacent car and
+   * is listed ONLY by this car when this car is on the bogie's LEFT.
+   */
+  bogies: BogieStatic[];
+}
+
+/** Static composition of a single axle within a bogie. */
+export interface AxleStatic {
+  /** True when this axle is powered (powered by a traction motor). Per-axle granularity covers 0.5M and 0.75M layouts where only some axles of a bogie are powered. */
+  isPowered: boolean;
+}
+
+/** Static composition of one bogie (or non-bogie fixed-axle group; they draw identically) under a car. */
+export interface BogieStatic {
+  /** Where this bogie sits under the car, in left-to-right display order. */
+  position: BogiePosition;
+  /** Axles in this bogie, left-to-right. Item count is equal to the number of axles (2 typical, 3 for Co arrangement). */
+  axles: AxleStatic[];
 }
 
 /** Vehicle identity plus static per-car composition (cabs, motors, pantographs). */

@@ -40,7 +40,7 @@ export interface OutputDataFrame extends RudolfDocumentBase {
   signals: Signals;
   /** Current speed limit and the next change points. */
   speedLimits: SpeedLimits;
-  /** Per-car dynamic state (BC pressure, amperage, occupancy). */
+  /** Per-car dynamic state (occupancy, load, faults, per-bogie dynamics). */
   cars: Cars;
   /** Cab switch state (horn, buzzer, headlights, wiper). */
   switches: Switches;

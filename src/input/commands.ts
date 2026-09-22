@@ -72,7 +72,7 @@ export interface SetAtoNotchCommand {
 /** Hold or release a deadman/EB channel. */
 export interface SetDeadmanCommand {
   kind: 'SetDeadman';
-  /** Which channel (hand/foot). */
+  /** Which channel (hand/foot/EB). */
   method: EBDeadmanMethod;
   /** True while the channel is held; false when released. */
   holding: boolean;
