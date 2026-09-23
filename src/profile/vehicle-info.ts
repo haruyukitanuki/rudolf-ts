@@ -26,8 +26,8 @@ export interface CarStaticInfo {
   pantographDirection: PantographDirection | null;
   /** Car length in meters. -1 if unknown. */
   length: number;
-  /** Car mass without passengers in kg; `-1` if unknown. Freight may be included here only if it cannot be separated from car mass. */
-  emptyMass: number;
+  /** Car unladen mass in kg; `-1` if unknown. Freight may be included here only if it cannot be separated from car mass. */
+  unladenMass: number;
   /**
    * Bogies under this car, left-to-right display order. Empty when the sim does not provide
    * composition. A Jacobs bogie (see `BogiePosition.Jacobs`) is shared with the adjacent car and
@@ -77,10 +77,10 @@ export interface VehicleInfo {
   /** Total length of the train in meters; `-1` if unknown. */
   totalLength: number;
   /**
-   * Total mass of the train without passengers in kg; `-1` if unknown.
+   * Total unladen mass of the train in kg; `-1` if unknown.
    * Freight may be included here only if it cannot be separated from car mass.
    */
-  totalEmptyMass: number;
+  totalUnladenMass: number;
   /**
    * Static control-hardware description (mascon layout, notch counts, holding brake, compressor
    * pressures). Inner fields are null when the sim has no value for them.
