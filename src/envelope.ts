@@ -12,6 +12,6 @@ export interface RudolfDocumentBase {
   kind: RudolfDocumentKind;
   /** Opaque identifier tying all documents of one play-session together. */
   scenarioId: string;
-  /** ISO 8601 timestamp at the producer. */
+  /** ISO 8601 timestamp, including time zone designator, at the producer. */
   sentAt: string;
 }

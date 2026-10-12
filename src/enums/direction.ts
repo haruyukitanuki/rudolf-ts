@@ -1,8 +1,8 @@
-/** Direction relative on TIMS screen. */
+/** Direction relative on HMI screen. */
 export const Direction = {
-  /** Facing left on TIMS. */
+  /** Facing left on HMI. */
   Left: 'Left',
-  /** Facing right on TIMS. */
+  /** Facing right on HMI. */
   Right: 'Right'
 } as const satisfies Record<string, string>;
 

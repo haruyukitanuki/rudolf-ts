@@ -2,7 +2,7 @@ import type { AtsRichStateType } from '../enums/ats-rich-state-type';
 
 /** Describes a single machine-readable ATS event (alternative to the free-form `Ats.state` string). */
 export interface AtsRichState {
-  /** Stable enum-like codes (e.g. `"P_APPROACH"`, `"EB"`). */
+  /** Raw free-form string from the sim (e.g. `"P_APPROACH"`, `"EB"`). */
   code: string;
   /** Human-readable display label (e.g. `"P接近"`). */
   name: string;

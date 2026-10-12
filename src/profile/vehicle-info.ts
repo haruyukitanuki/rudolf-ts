@@ -10,17 +10,17 @@ export interface CarStaticInfo {
   carNo: number;
   /** Per-car model code (e.g. `"KuHaE233"`, `MoHa225-51xx`). For maximum interoperability, romanise all kana in TitleCase. */
   model: string;
-  /** True when this car has a driver's cab. */
-  hasDriverCab: boolean;
-  /** True when this car has a conductor's cab. */
-  hasConductorCab: boolean;
-  /** True when this car is motorized (M/MM'). */
-  hasMotor: boolean;
-  /** True when this car carries one or more pantographs. */
-  hasPantograph: boolean;
+  /** True when this car has a driver's cab; null when unknown. */
+  hasDriverCab: boolean | null;
+  /** True when this car has a conductor's cab; null when unknown. */
+  hasConductorCab: boolean | null;
+  /** True when this car is motorized (M/MM'); null when unknown. */
+  hasMotor: boolean | null;
+  /** True when this car carries one or more pantographs; null when unknown. */
+  hasPantograph: boolean | null;
   /** Which way this car's driver cab faces; null when the car has no driver cab. */
   cabDirection: Direction | null;
-  /** Style of pantograph; null when `hasPantograph` is false. */
+  /** Style of pantograph; null when `hasPantograph` is false or unknown. */
   pantographType: PantographType | null;
   /** Which end(s) the pantograph(s) lean toward; null when `hasPantograph` is false or unknown. */
   pantographDirection: PantographDirection | null;

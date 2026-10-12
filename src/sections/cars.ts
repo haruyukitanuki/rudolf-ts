@@ -20,7 +20,7 @@ export interface Car {
   carNo: number;
   /** Percentage filled (May exceed 100%). */
   occupancyRate: number | null;
-  /** Per-car live load in kg; meaningful when the `physics.mass` capability is `All`. */
+  /** Per-car live load in kg; only available when the `physics.mass` capability is `All`. */
   loadMass: number | null;
   /** Body/roof/cab-scoped faults. Empty = normal; null = not modeled. */
   faults: CarFault[] | null;

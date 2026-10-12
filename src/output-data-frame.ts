@@ -15,7 +15,7 @@ import type { Time } from './sections/time';
 
 /**
  * Per-frame snapshot of dynamic train and cab state emitted by a simulator (sim → consumer).
- * Sent per-frame at the producer's cadence (~4 Hz typical; producers may emit faster). Pair with a
+ * Sent per-frame at the producer's cadence (10 Hz typical; producers may emit faster). Pair with a
  * `SimulatorProfile` sharing the same `scenarioId` for capability flags and vocabulary overrides.
  */
 export interface OutputDataFrame extends RudolfDocumentBase {

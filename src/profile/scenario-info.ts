@@ -6,7 +6,7 @@ export interface ScenarioInfo {
   route: string;
   /** Scenario author (if the simulator exposes it). null otherwise. */
   author: string | null;
-  /** Bare `"HH:MM:SS"`. This does not include date. */
+  /** Scenario start time as ISO local datetime (e.g. `"2026-09-06T07:42:00"`). */
   scenarioStartTime: string;
   /** Train/diagram number when known at scenario load. Mirrors `Diagram.trainNumber`. */
   diagramNumber: string | null;
