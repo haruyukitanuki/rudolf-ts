@@ -14,7 +14,7 @@ export interface Diagram {
   serviceType: string | null;
   /** Operation direct relative to the line. */
   direction: LineDirection | null;
-  /** Usually derived from Diagram Number using a formula dependent on the operator. */
+  /** Sim-native only; not derived. */
   runNumber: string | null;
 }
 

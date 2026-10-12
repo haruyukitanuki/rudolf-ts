@@ -1,8 +1,8 @@
-/** Which end of the car a pantograph leans toward (TIMS-relative); Both = both ends. */
+/** Which end of the car a pantograph leans toward (HMI-relative); Both = both ends. */
 export const PantographDirection = {
-  /** Leans toward the left (TIMS-relative). */
+  /** Leans toward the left on HMI. */
   Left: 'Left',
-  /** Leans toward the right (TIMS-relative). */
+  /** Leans toward the right on HMI. */
   Right: 'Right',
   /** Leans toward both ends. */
   Both: 'Both'

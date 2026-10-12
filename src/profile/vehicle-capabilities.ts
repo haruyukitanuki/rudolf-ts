@@ -16,7 +16,7 @@ export interface VehicleCapabilities {
   powerNotches: number | null;
   /** Number of service brake notches (e.g. B1..B7 = 7); null when unknown. */
   brakeNotches: number | null;
-  /** Signed notch value representing EB in the SetNotch encoding (e.g. `-8`); null when unknown. */
+  /** Signed notch value representing EB in the SetNotch encoding (e.g. `-8`, NOT the `-100` sentinel); null when unknown. */
   ebNotch: number | null;
   /** Number of holding-brake (抑速) notches; `0` when the vehicle has none, null when unknown. */
   holdingBrakeNotches: number | null;

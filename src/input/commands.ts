@@ -21,14 +21,22 @@ export interface SetNotchCommand {
 /** Set the power notch (two-handle vehicles). */
 export interface SetPowerNotchCommand {
   kind: 'SetPowerNotch';
-  /** 0 = neutral; positive integers are P1, P2, ... up to the vehicle's max. */
+  /**
+   * 0 = neutral (cut power).
+   * Positive integers are P1, P2, ... up to the vehicle's max.
+   * Negative integers may have sim-specific uses (e.g., TRAIN CREW 抑速).
+   */
   value: number;
 }
 
 /** Set the brake notch (two-handle vehicles). */
 export interface SetBrakeNotchCommand {
   kind: 'SetBrakeNotch';
-  /** 0 = release; positive integers are B1, B2, ... up to EB. */
+  /**
+   * 0 = release brakes.
+   * Positive integers are B1, B2, ... up to EB.
+   * Negative integers may have sim-specific uses.
+   */
   value: number;
 }
 
