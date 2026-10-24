@@ -6,7 +6,7 @@ import type { CarFault } from '../enums/car-fault';
 export interface BogieDynamic {
   /** Matches the static entry at the same index. */
   position: BogiePosition;
-  /** kPa; null when sim doesn't expose per-bogie BC pressure. */
+  /** Brake cylinder (BC) pressure in kPa; null when sim doesn't expose. */
   bcPressure: number | null;
   /** Amperes; null on unpowered bogies or when sim doesn't expose per-bogie motor current. */
   amperage: number | null;
@@ -22,6 +22,12 @@ export interface Car {
   occupancyRate: number | null;
   /** Per-car live load in kg; only available when the `physics.mass` capability is `All`. */
   loadMass: number | null;
+  /** Brake pipe (BP) pressure in kPa; null if the train doesn't use BP, or the sim doesn't expose. */
+  bpPressure: number | null;
+  /** Straight air pipe (SAP) pressure in kPa; null if the train doesn't use SAP, or the sim doesn't expose. */
+  sapPressure: number | null;
+  /** Auxiliary reservior pressure in kPa; null if the car doesn't have an auxiliary reservior, or the sim doesn't expose. */
+  auxPressure: number | null;
   /** Body/roof/cab-scoped faults. Empty = normal; null = not modeled. */
   faults: CarFault[] | null;
   /**

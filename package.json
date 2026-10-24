@@ -1,6 +1,6 @@
 {
   "name": "@tanuden/rudolf",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Universal wire-format standard for communication between Japanese train simulators and external programs.",
   "license": "Apache-2.0",
   "homepage": "https://github.com/haruyukitanuki/rudolf-ts",
