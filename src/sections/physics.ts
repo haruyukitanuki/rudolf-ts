@@ -10,9 +10,11 @@ export interface Physics {
   curveRadius: number | null;
   /** Per mille; null when the sim doesn't expose gradient. */
   gradient: number | null;
-  /** MR Pressure in kPa; train-level; always present. */
+  /** Main reservoir (MR) pressure in kPa; train-level; always present. */
   mrPressure: number;
-  /** Total load in kg. Equal to the sum of per-car `loadMass` values only when the `physics.mass` capability is `All`. */
+  /** Equalizing reservoir (ER) pressure in kPa; train-level; null when the train doesn't have ER, or the sim doesn't expose. */
+  erPressure: number | null;
+  /** Total load in kg. Only available if `physics.mass` capability is `All` or `TotalOnly`. */
   totalLoadMass: number | null;
 }
 
@@ -23,5 +25,6 @@ export const emptyPhysics = (): Physics => ({
   curveRadius: null,
   gradient: null,
   mrPressure: 0,
+  erPressure: null,
   totalLoadMass: null
 });
