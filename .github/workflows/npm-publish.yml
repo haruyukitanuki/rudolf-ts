@@ -1,4 +1,4 @@
-# Publishes the package to npm when a GitHub release is created.
+# Publishes the package to npm when a GitHub release is published.
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
 name: Publish to NPM
@@ -9,7 +9,7 @@ permissions:
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   publish-npm:
