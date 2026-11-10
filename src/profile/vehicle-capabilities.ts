@@ -25,3 +25,15 @@ export interface VehicleCapabilities {
   /** Air-compressor cut-out (stop) pressure in kPa; null when unknown. */
   cpStopPressure: number | null;
 }
+
+/** Create a `VehicleCapabilities` with every field null (unknown), mirroring the C# field initializers. */
+export const emptyVehicleCapabilities = (): VehicleCapabilities => ({
+  masconType: null,
+  masconBrakeType: null,
+  powerNotches: null,
+  brakeNotches: null,
+  ebNotch: null,
+  holdingBrakeNotches: null,
+  cpStartPressure: null,
+  cpStopPressure: null
+});

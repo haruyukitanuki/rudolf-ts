@@ -1,2 +1,4 @@
-/** RUDOLF schema version emitted on the wire as `schemaVersion`. */
-export const SCHEMA_VERSION = '1.1';
+import { rudolfVersion } from '../package.json';
+
+/** RUDOLF schema version emitted on the wire as `schemaVersion`, sourced from `package.json`. */
+export const SCHEMA_VERSION: string = rudolfVersion;
