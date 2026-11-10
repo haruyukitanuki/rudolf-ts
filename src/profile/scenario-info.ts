@@ -15,3 +15,14 @@ export interface ScenarioInfo {
   /** Service type when known at scenario load. Mirrors `Diagram.serviceType`. */
   serviceType: string | null;
 }
+
+/** Create a `ScenarioInfo` with blank metadata, mirroring the C# field initializers. */
+export const emptyScenarioInfo = (): ScenarioInfo => ({
+  title: '',
+  route: '',
+  author: null,
+  scenarioStartTime: '0000-01-01T00:00:00',
+  diagramNumber: null,
+  boundFor: null,
+  serviceType: null
+});

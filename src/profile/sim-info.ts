@@ -9,3 +9,11 @@ export interface SimInfo {
   /** Adapter version string in semver. */
   adapterVersion: string;
 }
+
+/** Create a `SimInfo` with blank identity fields, mirroring the C# field initializers. */
+export const emptySimInfo = (): SimInfo => ({
+  name: '',
+  version: null,
+  adapterName: '',
+  adapterVersion: ''
+});
