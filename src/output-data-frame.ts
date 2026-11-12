@@ -1,17 +1,31 @@
+import { SCHEMA_VERSION } from './constants';
 import type { RudolfDocumentBase } from './envelope';
 import type { Ats } from './sections/ats';
+import { emptyAts } from './sections/ats';
 import type { Cars } from './sections/cars';
+import { emptyCars } from './sections/cars';
 import type { Controllers } from './sections/controllers';
+import { emptyControllers } from './sections/controllers';
 import type { Diagram } from './sections/diagram';
+import { emptyDiagram } from './sections/diagram';
 import type { Doors } from './sections/doors';
+import { emptyDoors } from './sections/doors';
 import type { GameState } from './sections/game-state';
+import { emptyGameState } from './sections/game-state';
 import type { Lamps } from './sections/lamps';
+import { emptyLamps } from './sections/lamps';
 import type { Physics } from './sections/physics';
+import { emptyPhysics } from './sections/physics';
 import type { Signals } from './sections/signals';
+import { emptySignals } from './sections/signals';
 import type { SpeedLimits } from './sections/speed-limits';
+import { emptySpeedLimits } from './sections/speed-limits';
 import type { Stations } from './sections/stations';
+import { emptyStations } from './sections/stations';
 import type { Switches } from './sections/switches';
+import { emptySwitches } from './sections/switches';
 import type { Time } from './sections/time';
+import { emptyTime } from './sections/time';
 
 /**
  * Per-frame snapshot of dynamic train and cab state emitted by a simulator (sim → consumer).
@@ -49,3 +63,24 @@ export interface OutputDataFrame extends RudolfDocumentBase {
   /** Sim/vendor-specific blocks keyed `"<namespace>:<concern>"`. */
   extensions: Record<string, unknown> | null;
 }
+
+export const emptyOutputDataFrame = (): OutputDataFrame => ({
+  schemaVersion: SCHEMA_VERSION,
+  kind: 'OutputDataFrame',
+  scenarioId: '',
+  sentAt: '',
+  time: emptyTime(),
+  diagram: emptyDiagram(),
+  stations: emptyStations(),
+  physics: emptyPhysics(),
+  controllers: emptyControllers(),
+  doors: emptyDoors(),
+  lamps: emptyLamps(),
+  ats: emptyAts(),
+  signals: emptySignals(),
+  speedLimits: emptySpeedLimits(),
+  cars: emptyCars(),
+  switches: emptySwitches(),
+  gameState: emptyGameState(),
+  extensions: null
+});
