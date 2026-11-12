@@ -1,9 +1,15 @@
+import { SCHEMA_VERSION } from './constants';
 import type { RudolfDocumentBase } from './envelope';
 import type { Capabilities } from './profile/capabilities';
+import { emptyCapabilities } from './profile/capabilities';
 import type { ScenarioInfo } from './profile/scenario-info';
+import { emptyScenarioInfo } from './profile/scenario-info';
 import type { SimInfo } from './profile/sim-info';
+import { emptySimInfo } from './profile/sim-info';
 import type { VehicleInfo } from './profile/vehicle-info';
+import { emptyVehicleInfo } from './profile/vehicle-info';
 import type { Vocabularies } from './profile/vocabularies';
+import { defaultVocabularies } from './profile/vocabularies';
 
 /**
  * Once-per-scenario descriptor of what the sim+vehicle can and cannot fill in subsequent
@@ -26,3 +32,16 @@ export interface SimulatorProfile extends RudolfDocumentBase {
   /** Vocabulary overrides (lamps, signal phase, transponder codes) for this sim+vehicle. */
   vocabularies: Vocabularies;
 }
+
+export const emptySimulatorProfile = (): SimulatorProfile => ({
+  schemaVersion: SCHEMA_VERSION,
+  kind: 'SimulatorProfile',
+  scenarioId: '',
+  sentAt: '',
+  sequence: 0,
+  sim: emptySimInfo(),
+  scenario: emptyScenarioInfo(),
+  vehicle: emptyVehicleInfo(),
+  capabilities: emptyCapabilities(),
+  vocabularies: defaultVocabularies()
+});
