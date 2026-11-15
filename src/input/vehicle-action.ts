@@ -4,49 +4,49 @@
  */
 export const VehicleAction = {
   /** Reset the EB/deadman alarm (EB復帰). */
-  EBReset: 'EBReset',
+  EBReset: "EBReset",
   /** Engage the gradient-start / anti-rollback switch (勾配起動スイッチ). */
-  GradientStart: 'GradientStart',
+  GradientStart: "GradientStart",
   /** Safety-brake switch (保安ブレーキ). */
-  SafetyBrake: 'SafetyBrake',
+  SafetyBrake: "SafetyBrake",
   /** Snow-resistance brake switch (耐雪ブレーキ). */
-  SnowBrake: 'SnowBrake',
+  SnowBrake: "SnowBrake",
   /** Sound the air horn (空気笛). */
-  HornAir: 'HornAir',
+  HornAir: "HornAir",
   /** Sound the electric horn (電気笛). */
-  HornElectric: 'HornElectric',
+  HornElectric: "HornElectric",
   /** Press the cab buzzer (合図ブザー). */
-  Buzzer: 'Buzzer',
+  Buzzer: "Buzzer",
   /** Open the left-side passenger doors (左ドア開). */
-  DoorOpenLeft: 'DoorOpenLeft',
+  DoorOpenLeft: "DoorOpenLeft",
   /** Close the left-side passenger doors (左ドア閉). */
-  DoorCloseLeft: 'DoorCloseLeft',
+  DoorCloseLeft: "DoorCloseLeft",
   /** Open the right-side passenger doors (右ドア開). */
-  DoorOpenRight: 'DoorOpenRight',
+  DoorOpenRight: "DoorOpenRight",
   /** Close the right-side passenger doors (右ドア閉). */
-  DoorCloseRight: 'DoorCloseRight',
+  DoorCloseRight: "DoorCloseRight",
   /** Re-open/re-close switch after an interrupted closure (再開閉SW). */
-  DoorReopen: 'DoorReopen',
+  DoorReopen: "DoorReopen",
   /** Door-switch key operation (ドアスイッチ鍵). */
-  DoorKey: 'DoorKey',
+  DoorKey: "DoorKey",
   /** 3/4-door partial-open switch (3/4閉スイッチ). */
-  PartialDoor: 'PartialDoor',
+  PartialDoor: "PartialDoor",
   /** Door cut-out switch (ドアカットSW). */
-  DoorCut: 'DoorCut',
+  DoorCut: "DoorCut",
   /** Boarding-prompt buzzer (乗降促進). */
-  BoardingPrompt: 'BoardingPrompt',
+  BoardingPrompt: "BoardingPrompt",
   /** Trigger an in-car announcement / PA (車内放送). */
-  InCarBroadcast: 'InCarBroadcast',
+  InCarBroadcast: "InCarBroadcast",
   /** Dim the headlight / low beam (前灯減光). */
-  HeadLightLow: 'HeadLightLow',
+  HeadLightLow: "HeadLightLow",
   /** Headlight switch (前照灯SW). */
-  HeadLight: 'HeadLight',
+  HeadLight: "HeadLight",
   /** Passenger-cabin light switch (客室灯SW). */
-  CabinLight: 'CabinLight',
+  CabinLight: "CabinLight",
   /** Crew-room light switch (乗務員室灯SW). */
-  CrewRoomLight: 'CrewRoomLight',
+  CrewRoomLight: "CrewRoomLight",
   /** Instrument/meter light switch (計器灯SW). */
-  InstrumentLight: 'InstrumentLight'
+  InstrumentLight: "InstrumentLight",
 } as const satisfies Record<string, string>;
 
 export type VehicleAction = (typeof VehicleAction)[keyof typeof VehicleAction];

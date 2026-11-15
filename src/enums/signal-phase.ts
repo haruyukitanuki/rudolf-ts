@@ -28,7 +28,7 @@ export const SignalPhase = {
   /** Proceed (進行). */
   G: 6,
   /** High-speed Proceed (高速進行). */
-  GG: 7
+  GG: 7,
 } as const satisfies Record<string, number>;
 
 export type SignalPhase = (typeof SignalPhase)[keyof typeof SignalPhase];

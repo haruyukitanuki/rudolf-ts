@@ -13,5 +13,5 @@ export interface Lamps {
 }
 
 export const emptyLamps = (): Lamps => ({
-  values: Array.from({ length: 512 }, () => 0)
+  values: Array.from({ length: 512 }, () => 0),
 });

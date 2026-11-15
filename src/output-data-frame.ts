@@ -1,31 +1,31 @@
-import { SCHEMA_VERSION } from './constants';
-import type { RudolfDocumentBase } from './envelope';
-import type { Ats } from './sections/ats';
-import { emptyAts } from './sections/ats';
-import type { Cars } from './sections/cars';
-import { emptyCars } from './sections/cars';
-import type { Controllers } from './sections/controllers';
-import { emptyControllers } from './sections/controllers';
-import type { Diagram } from './sections/diagram';
-import { emptyDiagram } from './sections/diagram';
-import type { Doors } from './sections/doors';
-import { emptyDoors } from './sections/doors';
-import type { GameState } from './sections/game-state';
-import { emptyGameState } from './sections/game-state';
-import type { Lamps } from './sections/lamps';
-import { emptyLamps } from './sections/lamps';
-import type { Physics } from './sections/physics';
-import { emptyPhysics } from './sections/physics';
-import type { Signals } from './sections/signals';
-import { emptySignals } from './sections/signals';
-import type { SpeedLimits } from './sections/speed-limits';
-import { emptySpeedLimits } from './sections/speed-limits';
-import type { Stations } from './sections/stations';
-import { emptyStations } from './sections/stations';
-import type { Switches } from './sections/switches';
-import { emptySwitches } from './sections/switches';
-import type { Time } from './sections/time';
-import { emptyTime } from './sections/time';
+import { SCHEMA_VERSION } from "./constants.js";
+import type { RudolfDocumentBase } from "./envelope.js";
+import type { Ats } from "./sections/ats.js";
+import { emptyAts } from "./sections/ats.js";
+import type { Cars } from "./sections/cars.js";
+import { emptyCars } from "./sections/cars.js";
+import type { Controllers } from "./sections/controllers.js";
+import { emptyControllers } from "./sections/controllers.js";
+import type { Diagram } from "./sections/diagram.js";
+import { emptyDiagram } from "./sections/diagram.js";
+import type { Doors } from "./sections/doors.js";
+import { emptyDoors } from "./sections/doors.js";
+import type { GameState } from "./sections/game-state.js";
+import { emptyGameState } from "./sections/game-state.js";
+import type { Lamps } from "./sections/lamps.js";
+import { emptyLamps } from "./sections/lamps.js";
+import type { Physics } from "./sections/physics.js";
+import { emptyPhysics } from "./sections/physics.js";
+import type { Signals } from "./sections/signals.js";
+import { emptySignals } from "./sections/signals.js";
+import type { SpeedLimits } from "./sections/speed-limits.js";
+import { emptySpeedLimits } from "./sections/speed-limits.js";
+import type { Stations } from "./sections/stations.js";
+import { emptyStations } from "./sections/stations.js";
+import type { Switches } from "./sections/switches.js";
+import { emptySwitches } from "./sections/switches.js";
+import type { Time } from "./sections/time.js";
+import { emptyTime } from "./sections/time.js";
 
 /**
  * Per-frame snapshot of dynamic train and cab state emitted by a simulator (sim → consumer).
@@ -33,7 +33,7 @@ import { emptyTime } from './sections/time';
  * `SimulatorProfile` sharing the same `scenarioId` for capability flags and vocabulary overrides.
  */
 export interface OutputDataFrame extends RudolfDocumentBase {
-  kind: 'OutputDataFrame';
+  kind: "OutputDataFrame";
   /** Sim clock + frame counter. */
   time: Time;
   /** Train identity (number, bound-for, service class) for this run. */
@@ -66,9 +66,9 @@ export interface OutputDataFrame extends RudolfDocumentBase {
 
 export const emptyOutputDataFrame = (): OutputDataFrame => ({
   schemaVersion: SCHEMA_VERSION,
-  kind: 'OutputDataFrame',
-  scenarioId: '',
-  sentAt: '',
+  kind: "OutputDataFrame",
+  scenarioId: "",
+  sentAt: "",
   time: emptyTime(),
   diagram: emptyDiagram(),
   stations: emptyStations(),
@@ -82,5 +82,5 @@ export const emptyOutputDataFrame = (): OutputDataFrame => ({
   cars: emptyCars(),
   switches: emptySwitches(),
   gameState: emptyGameState(),
-  extensions: null
+  extensions: null,
 });

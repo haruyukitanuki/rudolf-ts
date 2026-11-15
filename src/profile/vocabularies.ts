@@ -34,31 +34,31 @@ export const DEFAULT_LAMP_VOCABULARY: Record<string, number> = {
   overload: 7,
   ato: 8,
   snowBrake: 9,
-  wheelSlip: 10
+  wheelSlip: 10,
 };
 
 /** Default signal-phase vocabulary (spec §5.9): phase index as string → aspect code. */
 export const DEFAULT_SIGNAL_PHASE_VOCABULARY: Record<string, string> = {
-  '0': ':',
-  '1': 'R',
-  '2': 'YY',
-  '3': 'Y',
-  '4': 'YG',
-  '5': 'YGF',
-  '6': 'G',
-  '7': 'GG'
+  "0": ":",
+  "1": "R",
+  "2": "YY",
+  "3": "Y",
+  "4": "YG",
+  "5": "YGF",
+  "6": "G",
+  "7": "GG",
 };
 
 /** Default signal-phase speeds in km/h (spec §5.9): `-1` = unlimited. */
 export const DEFAULT_SIGNAL_PHASE_SPEED_VOCABULARY: Record<string, number | null> = {
-  '0': -1,
-  '1': 0,
-  '2': 25,
-  '3': 45,
-  '4': 65,
-  '5': 90,
-  '6': -1,
-  '7': -1
+  "0": -1,
+  "1": 0,
+  "2": 25,
+  "3": 45,
+  "4": 65,
+  "5": 90,
+  "6": -1,
+  "7": -1,
 };
 
 /**
@@ -69,5 +69,5 @@ export const defaultVocabularies = (): Vocabularies => ({
   lamps: { ...DEFAULT_LAMP_VOCABULARY },
   signalPhase: { ...DEFAULT_SIGNAL_PHASE_VOCABULARY },
   signalPhaseSpeed: { ...DEFAULT_SIGNAL_PHASE_SPEED_VOCABULARY },
-  transponders: null
+  transponders: null,
 });

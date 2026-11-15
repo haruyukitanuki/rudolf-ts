@@ -4,13 +4,13 @@
  */
 export const BogiePosition = {
   /** Leftmost bogie under the car as displayed. */
-  Left: 'Left',
+  Left: "Left",
   /** Intermediate bogie (only for cars with 3 or more bogies, e.g. Bo-Bo-Bo). */
-  Middle: 'Middle',
+  Middle: "Middle",
   /** Rightmost bogie under the car as displayed. */
-  Right: 'Right',
+  Right: "Right",
   /** Bogie shared with the next car (Jacobs/articulated bogie). */
-  Jacobs: 'Jacobs'
+  Jacobs: "Jacobs",
 } as const satisfies Record<string, string>;
 
 export type BogiePosition = (typeof BogiePosition)[keyof typeof BogiePosition];

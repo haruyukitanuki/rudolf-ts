@@ -1,15 +1,15 @@
-import { SCHEMA_VERSION } from './constants';
-import type { RudolfDocumentBase } from './envelope';
-import type { Capabilities } from './profile/capabilities';
-import { emptyCapabilities } from './profile/capabilities';
-import type { ScenarioInfo } from './profile/scenario-info';
-import { emptyScenarioInfo } from './profile/scenario-info';
-import type { SimInfo } from './profile/sim-info';
-import { emptySimInfo } from './profile/sim-info';
-import type { VehicleInfo } from './profile/vehicle-info';
-import { emptyVehicleInfo } from './profile/vehicle-info';
-import type { Vocabularies } from './profile/vocabularies';
-import { defaultVocabularies } from './profile/vocabularies';
+import { SCHEMA_VERSION } from "./constants.js";
+import type { RudolfDocumentBase } from "./envelope.js";
+import type { Capabilities } from "./profile/capabilities.js";
+import { emptyCapabilities } from "./profile/capabilities.js";
+import type { ScenarioInfo } from "./profile/scenario-info.js";
+import { emptyScenarioInfo } from "./profile/scenario-info.js";
+import type { SimInfo } from "./profile/sim-info.js";
+import { emptySimInfo } from "./profile/sim-info.js";
+import type { VehicleInfo } from "./profile/vehicle-info.js";
+import { emptyVehicleInfo } from "./profile/vehicle-info.js";
+import type { Vocabularies } from "./profile/vocabularies.js";
+import { defaultVocabularies } from "./profile/vocabularies.js";
 
 /**
  * Once-per-scenario descriptor of what the sim+vehicle can and cannot fill in subsequent
@@ -18,7 +18,7 @@ import { defaultVocabularies } from './profile/vocabularies';
  * for fields the sim cannot source.
  */
 export interface SimulatorProfile extends RudolfDocumentBase {
-  kind: 'SimulatorProfile';
+  kind: "SimulatorProfile";
   /** Incremented when profile data is changed within a drive. */
   sequence: number;
   /** Simulator + adapter identity (name + version). */
@@ -35,13 +35,13 @@ export interface SimulatorProfile extends RudolfDocumentBase {
 
 export const emptySimulatorProfile = (): SimulatorProfile => ({
   schemaVersion: SCHEMA_VERSION,
-  kind: 'SimulatorProfile',
-  scenarioId: '',
-  sentAt: '',
+  kind: "SimulatorProfile",
+  scenarioId: "",
+  sentAt: "",
   sequence: 0,
   sim: emptySimInfo(),
   scenario: emptyScenarioInfo(),
   vehicle: emptyVehicleInfo(),
   capabilities: emptyCapabilities(),
-  vocabularies: defaultVocabularies()
+  vocabularies: defaultVocabularies(),
 });

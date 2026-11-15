@@ -1,5 +1,5 @@
-import type { EBDeadmanMethod } from '../enums/eb-deadman-method';
-import type { Reverser } from '../enums/reverser';
+import type { EBDeadmanMethod } from "../enums/eb-deadman-method.js";
+import type { Reverser } from "../enums/reverser.js";
 
 /** ATO state. */
 export interface AtoState {
@@ -41,5 +41,5 @@ export const emptyControllers = (): Controllers => ({
   reverser: 0,
   ato: null,
   tasc: null,
-  deadman: null
+  deadman: null,
 });

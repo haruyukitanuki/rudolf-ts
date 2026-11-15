@@ -2,7 +2,7 @@
  * Discriminator string identifying which RUDOLF document is on the wire.
  * Consumers narrow `RudolfDocumentBase` by checking `kind`.
  */
-export type RudolfDocumentKind = 'SimulatorProfile' | 'OutputDataFrame' | 'InputCommand';
+export type RudolfDocumentKind = "SimulatorProfile" | "OutputDataFrame" | "InputCommand";
 
 /** Shared envelope fields present on every RUDOLF document. */
 export interface RudolfDocumentBase {

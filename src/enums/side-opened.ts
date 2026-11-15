@@ -19,7 +19,7 @@ export const SideOpened = {
   /** Doors on both sides opened. */
   Both: 2,
   /** Doors open but which side can't be distinguished. */
-  OpenSideUnknown: 3
+  OpenSideUnknown: 3,
 } as const satisfies Record<string, number>;
 
 export type SideOpened = (typeof SideOpened)[keyof typeof SideOpened];

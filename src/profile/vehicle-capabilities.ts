@@ -1,5 +1,5 @@
-import type { MasconBrakeType } from '../enums/mascon-brake-type';
-import type { MasconType } from '../enums/mascon-type';
+import type { MasconBrakeType } from "../enums/mascon-brake-type.js";
+import type { MasconType } from "../enums/mascon-type.js";
 
 /**
  * Static control-hardware description for the vehicle (mascon layout, notch counts, holding brake,
@@ -35,5 +35,5 @@ export const emptyVehicleCapabilities = (): VehicleCapabilities => ({
   ebNotch: null,
   holdingBrakeNotches: null,
   cpStartPressure: null,
-  cpStopPressure: null
+  cpStopPressure: null,
 });

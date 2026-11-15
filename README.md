@@ -11,8 +11,15 @@ npm install @tanuden/rudolf
 ## Usage
 
 ```ts
-import type { OutputDataFrame, SimulatorProfile, InputCommand } from '@tanuden/rudolf';
-import { SCHEMA_VERSION, emptyOutputDataFrame, emptySimulatorProfile, emptyPhysics, SignalPhase, SideOpened } from '@tanuden/rudolf';
+import type { OutputDataFrame, SimulatorProfile, InputCommand } from "@tanuden/rudolf";
+import {
+  SCHEMA_VERSION,
+  emptyOutputDataFrame,
+  emptySimulatorProfile,
+  emptyPhysics,
+  SignalPhase,
+  SideOpened,
+} from "@tanuden/rudolf";
 
 const frame = emptyOutputDataFrame();
 const profile = emptySimulatorProfile();

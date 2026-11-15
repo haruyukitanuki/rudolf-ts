@@ -1,4 +1,4 @@
-import type { SpeedLimitType } from '../enums/speed-limit-type';
+import type { SpeedLimitType } from "../enums/speed-limit-type.js";
 
 /** The next speed-limit change ahead of the train. */
 export interface SpeedLimitNext {
@@ -29,5 +29,5 @@ export interface SpeedLimits {
 export const emptySpeedLimits = (): SpeedLimits => ({
   current: 0,
   currentType: null,
-  next: null
+  next: null,
 });

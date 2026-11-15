@@ -7,8 +7,8 @@ import type {
   SetNotchCommand,
   SetPowerNotchCommand,
   SetReverserCommand,
-  SetWiperCommand
-} from './commands';
+  SetWiperCommand,
+} from "./commands.js";
 
 /**
  * Discriminated-union command type. The wire-level `kind` string discriminator
@@ -42,4 +42,4 @@ export interface CustomCommand {
 export type CommandInput = Command | CustomCommand;
 
 /** Command `kind` discriminator: the modeled kinds (autocomplete hints) plus any freeform string. */
-export type CommandKind = Command['kind'] | (string & {});
+export type CommandKind = Command["kind"] | (string & {});

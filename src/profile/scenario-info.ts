@@ -18,11 +18,11 @@ export interface ScenarioInfo {
 
 /** Create a `ScenarioInfo` with blank metadata, mirroring the C# field initializers. */
 export const emptyScenarioInfo = (): ScenarioInfo => ({
-  title: '',
-  route: '',
+  title: "",
+  route: "",
   author: null,
-  scenarioStartTime: '0000-01-01T00:00:00',
+  scenarioStartTime: "0000-01-01T00:00:00",
   diagramNumber: null,
   boundFor: null,
-  serviceType: null
+  serviceType: null,
 });

@@ -1,21 +1,21 @@
 /** Which outer-game screen is currently visible. */
 export const GameScreen = {
   /** Active gameplay (driving the train). */
-  MainGame: 'MainGame',
+  MainGame: "MainGame",
   /** Game is paused mid-scenario. */
-  Pause: 'Pause',
+  Pause: "Pause",
   /** Loading a scenario/vehicle/route. */
-  Loading: 'Loading',
+  Loading: "Loading",
   /** In a menu (settings, scenario selector, etc.). */
-  Menu: 'Menu',
+  Menu: "Menu",
   /** Post-scenario result/scoring screen. */
-  Result: 'Result',
+  Result: "Result",
   /** Title screen. */
-  Title: 'Title',
+  Title: "Title",
   /** Sim process is not running; default value. */
-  NotRunning: 'NotRunning',
+  NotRunning: "NotRunning",
   /** Some other screen the schema doesn't name explicitly. */
-  Other: 'Other'
+  Other: "Other",
 } as const satisfies Record<string, string>;
 
 export type GameScreen = (typeof GameScreen)[keyof typeof GameScreen];

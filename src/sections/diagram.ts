@@ -1,4 +1,4 @@
-import type { LineDirection } from '../enums/line-direction';
+import type { LineDirection } from "../enums/line-direction.js";
 
 /**
  * Train-identity context for this run (train number, bound-for, service type, line direction).
@@ -23,5 +23,5 @@ export const emptyDiagram = (): Diagram => ({
   boundFor: null,
   serviceType: null,
   direction: null,
-  runNumber: null
+  runNumber: null,
 });

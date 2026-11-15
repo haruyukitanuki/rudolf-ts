@@ -1,5 +1,5 @@
-import type { SignalType } from '../enums/signal-type';
-import type { TransponderCategory } from '../enums/transponder-category';
+import type { SignalType } from "../enums/signal-type.js";
+import type { TransponderCategory } from "../enums/transponder-category.js";
 
 /** A single beacon/transponder placed in the trackbed. */
 export interface Transponder {
@@ -34,5 +34,5 @@ export interface Signals {
 }
 
 export const emptySignals = (): Signals => ({
-  list: []
+  list: [],
 });

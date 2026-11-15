@@ -26,5 +26,5 @@ export const emptyPhysics = (): Physics => ({
   gradient: null,
   mrPressure: 0,
   erPressure: null,
-  totalLoadMass: null
+  totalLoadMass: null,
 });

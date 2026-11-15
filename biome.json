@@ -1,0 +1,25 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
+  "extends": ["@tanuden/biome-config/lib"],
+  "files": {
+    "includes": ["!**/package-lock.json", "!**/*.svg", "!**/dist", "!.superpowers"]
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "useImportExtensions": {
+          "level": "error",
+          "options": {
+            "extensionMappings": {
+              "ts": "js",
+              "tsx": "js"
+            }
+          }
+        }
+      },
+      "nursery": {
+        "useExplicitType": "off"
+      }
+    }
+  }
+}

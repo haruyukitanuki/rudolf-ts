@@ -1,4 +1,4 @@
-import type { AtsRichStateType } from '../enums/ats-rich-state-type';
+import type { AtsRichStateType } from "../enums/ats-rich-state-type.js";
 
 /** Describes a single machine-readable ATS event (alternative to the free-form `Ats.state` string). */
 export interface AtsRichState {
@@ -32,5 +32,5 @@ export const emptyAts = (): Ats => ({
   class: null,
   speed: null,
   state: null,
-  richState: []
+  richState: [],
 });

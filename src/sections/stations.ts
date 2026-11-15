@@ -1,5 +1,5 @@
-import type { InteractionType } from '../enums/interaction-type';
-import type { StopType } from '../enums/stop-type';
+import type { InteractionType } from "../enums/interaction-type.js";
+import type { StopType } from "../enums/stop-type.js";
 
 /** A single station entry within `Stations.list`. */
 export interface Station {
@@ -57,7 +57,7 @@ export interface Stations {
 export const emptyStations = (): Stations => ({
   list: [],
   currentIndex: null,
-  nextIndex: null
+  nextIndex: null,
 });
 
 /** A synchronized movement with another train. */

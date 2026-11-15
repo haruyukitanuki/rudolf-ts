@@ -5,11 +5,11 @@
  */
 export const MasconBrakeType = {
   /** Discrete, self-lapping stepped brake notches (段階ブレーキ). */
-  Notched: 'Notched',
+  Notched: "Notched",
   /** Continuous brake with a lap position for holding pressure (直通ブレーキ, ラップ可能). Implies `Continuous` (it is non-notched). */
-  LapCapable: 'LapCapable',
+  LapCapable: "LapCapable",
   /** Continuous (non-notched) brake handle with no lap position — e.g. a direct/straight-air brake (直通ブレーキ). See `LapCapable` for the continuous-with-lap variant. */
-  Continuous: 'Continuous'
+  Continuous: "Continuous",
 } as const satisfies Record<string, string>;
 
 export type MasconBrakeType = (typeof MasconBrakeType)[keyof typeof MasconBrakeType];

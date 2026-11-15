@@ -12,8 +12,8 @@ export interface SimInfo {
 
 /** Create a `SimInfo` with blank identity fields, mirroring the C# field initializers. */
 export const emptySimInfo = (): SimInfo => ({
-  name: '',
+  name: "",
   version: null,
-  adapterName: '',
-  adapterVersion: ''
+  adapterName: "",
+  adapterVersion: "",
 });

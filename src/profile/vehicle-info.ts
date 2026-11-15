@@ -1,9 +1,9 @@
-import type { BogiePosition } from '../enums/bogie-position';
-import type { Direction } from '../enums/direction';
-import type { PantographDirection } from '../enums/pantograph-direction';
-import type { PantographType } from '../enums/pantograph-type';
-import { emptyVehicleCapabilities } from './vehicle-capabilities';
-import type { VehicleCapabilities } from './vehicle-capabilities';
+import type { BogiePosition } from "../enums/bogie-position.js";
+import type { Direction } from "../enums/direction.js";
+import type { PantographDirection } from "../enums/pantograph-direction.js";
+import type { PantographType } from "../enums/pantograph-type.js";
+import type { VehicleCapabilities } from "./vehicle-capabilities.js";
+import { emptyVehicleCapabilities } from "./vehicle-capabilities.js";
 
 /** Static composition for a single car (cabs, motors, pantograph layout). */
 export interface CarStaticInfo {
@@ -91,12 +91,12 @@ export interface VehicleInfo {
 
 /** Create a `VehicleInfo` with blank identity, no cars, and unknown dimensions, mirroring the C# field initializers. */
 export const emptyVehicleInfo = (): VehicleInfo => ({
-  name: '',
-  model: '',
-  operator: '',
+  name: "",
+  model: "",
+  operator: "",
   cars: [],
   leadCar: 0,
   totalLength: -1,
   totalUnladenMass: -1,
-  capabilities: emptyVehicleCapabilities()
+  capabilities: emptyVehicleCapabilities(),
 });

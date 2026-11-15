@@ -4,13 +4,13 @@
  */
 export const TransponderCategory = {
   /** Pattern source transponder. */
-  Pattern: 'Pattern',
+  Pattern: "Pattern",
   /** Signal transponder. */
-  Signal: 'Signal',
+  Signal: "Signal",
   /** TASC transponder. */
-  TASC: 'TASC',
+  TASC: "TASC",
   /** Recognized but does not fit any specific category. */
-  Other: 'Other'
+  Other: "Other",
 } as const satisfies Record<string, string>;
 
 export type TransponderCategory = (typeof TransponderCategory)[keyof typeof TransponderCategory];

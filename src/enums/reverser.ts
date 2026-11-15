@@ -7,7 +7,7 @@ export const Reverser = {
   /** Neutral (中立). */
   Neutral: 0,
   /** Forward (前進). */
-  Forward: 1
+  Forward: 1,
 } as const satisfies Record<string, number>;
 
 export type Reverser = (typeof Reverser)[keyof typeof Reverser];

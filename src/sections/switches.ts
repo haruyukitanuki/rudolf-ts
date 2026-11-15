@@ -1,4 +1,4 @@
-import type { Wiper } from '../enums/wiper';
+import type { Wiper } from "../enums/wiper.js";
 
 /** Cab-switch state: horn, buzzer, headlights, wiper. */
 export interface Switches {
@@ -25,5 +25,5 @@ export const emptySwitches = (): Switches => ({
   buzzerConductor: false,
   headlights: false,
   highBeam: false,
-  wiper: null
+  wiper: null,
 });

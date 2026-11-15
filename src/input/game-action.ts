@@ -4,25 +4,25 @@
  */
 export const GameAction = {
   /** Toggle the exterior/external view (外部視点切替). */
-  ExteriorView: 'ExteriorView',
+  ExteriorView: "ExteriorView",
   /** Driver alternate viewpoint. */
-  DriverAlternateView: 'DriverAlternateView',
+  DriverAlternateView: "DriverAlternateView",
   /** Conductor rear-confirmation view (後方確認). */
-  ConductorAlternateView: 'ConductorAlternateView',
+  ConductorAlternateView: "ConductorAlternateView",
   /** Look out of the left window. */
-  LeftWindowView: 'LeftWindowView',
+  LeftWindowView: "LeftWindowView",
   /** Look out of the right window. */
-  RightWindowView: 'RightWindowView',
+  RightWindowView: "RightWindowView",
   /** Toggle the pause menu. */
-  TogglePauseMenu: 'TogglePauseMenu',
+  TogglePauseMenu: "TogglePauseMenu",
   /** Toggle the diagram/schedule display (スタフ表示). */
-  ToggleDiagramDisplay: 'ToggleDiagramDisplay',
+  ToggleDiagramDisplay: "ToggleDiagramDisplay",
   /** Toggle the in-game UI (画面表示). */
-  ToggleGUI: 'ToggleGUI',
+  ToggleGUI: "ToggleGUI",
   /** Toggle the crew door. */
-  ToggleCrewDoor: 'ToggleCrewDoor',
+  ToggleCrewDoor: "ToggleCrewDoor",
   /** Toggle the crew window. */
-  ToggleCrewWindow: 'ToggleCrewWindow'
+  ToggleCrewWindow: "ToggleCrewWindow",
 } as const satisfies Record<string, string>;
 
 export type GameAction = (typeof GameAction)[keyof typeof GameAction];

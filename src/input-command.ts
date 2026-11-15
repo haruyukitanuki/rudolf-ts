@@ -1,5 +1,5 @@
-import type { RudolfDocumentBase } from './envelope';
-import type { Command } from './input/command';
+import type { RudolfDocumentBase } from "./envelope.js";
+import type { Command } from "./input/command.js";
 
 /**
  * Single driver-input event sent from a consumer back into the simulator (consumer → sim).
@@ -7,7 +7,7 @@ import type { Command } from './input/command';
  * `sequenceNumber` for ordering and idempotency.
  */
 export interface InputCommand extends RudolfDocumentBase {
-  kind: 'InputCommand';
+  kind: "InputCommand";
   /** Monotonic per consumer; for ordering/idempotency. */
   sequenceNumber: number;
   /** The command payload. Discriminated on its `kind` string at the wire level. */

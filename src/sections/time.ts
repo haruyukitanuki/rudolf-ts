@@ -8,7 +8,7 @@ export interface Time {
 }
 
 export const emptyTime = (): Time => ({
-  sim: '00:00:00',
+  sim: "00:00:00",
   elapsed: 0,
-  tick: 0
+  tick: 0,
 });

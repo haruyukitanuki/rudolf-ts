@@ -1,6 +1,6 @@
-import type { CrewRole } from '../enums/crew-role';
-import type { DriveMode } from '../enums/drive-mode';
-import type { GameScreen } from '../enums/game-screen';
+import type { CrewRole } from "../enums/crew-role.js";
+import type { DriveMode } from "../enums/drive-mode.js";
+import type { GameScreen } from "../enums/game-screen.js";
 
 /** Outer-game context: which screen is showing, what role the player is, etc. */
 export interface GameState {
@@ -15,8 +15,8 @@ export interface GameState {
 }
 
 export const emptyGameState = (): GameState => ({
-  screen: 'NotRunning',
+  screen: "NotRunning",
   crewRole: null,
   driveMode: null,
-  isOneman: false
+  isOneman: false,
 });

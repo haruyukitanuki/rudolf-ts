@@ -1,6 +1,6 @@
-import type { BogieFault } from '../enums/bogie-fault';
-import type { BogiePosition } from '../enums/bogie-position';
-import type { CarFault } from '../enums/car-fault';
+import type { BogieFault } from "../enums/bogie-fault.js";
+import type { BogiePosition } from "../enums/bogie-position.js";
+import type { CarFault } from "../enums/car-fault.js";
 
 /** Dynamic state of one bogie. Index-aligned with `CarStaticInfo.bogies`. */
 export interface BogieDynamic {
@@ -49,5 +49,5 @@ export interface Cars {
 }
 
 export const emptyCars = (): Cars => ({
-  list: []
+  list: [],
 });

@@ -20,5 +20,5 @@ export interface Doors {
 
 export const emptyDoors = (): Doors => ({
   allClosed: true,
-  perCar: []
+  perCar: [],
 });
